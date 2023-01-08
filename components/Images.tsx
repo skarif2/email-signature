@@ -17,6 +17,7 @@ export default function Images() {
   const updateCTATextColor = useStore((state) => state.updateCTATextColor);
   const CTAImage = useStore((state) => state.CTAImage);
   const updateCTAImage = useStore((state) => state.updateCTAImage);
+
   return (
     <div className="flex h-full flex-1 flex-col gap-8 overflow-y-auto px-12 py-8">
       <h3 className="text-xl font-medium text-gray-100">

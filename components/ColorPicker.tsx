@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Image from 'next/image';
 import { HexColorPicker } from 'react-colorful';
+import { HashtagIcon } from '@heroicons/react/24/outline';
 
 type TColorPickerProps = {
   label: string;
@@ -20,9 +20,9 @@ export default function ColorPicker({
     <div className="flex flex-col">
       <label className="block text-sm font-medium text-teal-100">{label}</label>
       <div className="flex items-center gap-2">
-        <Image src="/hash.svg" alt="hash" width={18} height={18} />
+        <HashtagIcon className="h-5 w-5 text-teal-300" />
         <input
-          className="appearence-none w-28 border-b border-teal-500 bg-transparent py-3 px-1 uppercase leading-tight text-teal-300 placeholder-teal-600 focus:outline-none"
+          className="appearence-none w-28 border-b border-teal-500 bg-transparent px-1 pt-3 pb-2 uppercase leading-tight text-teal-300 placeholder-teal-600 focus:outline-none"
           id={label}
           type="text"
           placeholder={placeholder}

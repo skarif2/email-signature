@@ -1,10 +1,10 @@
-import { ReactElement } from 'react';
+import { ReactElement, SVGProps } from 'react';
 import Image from 'next/image';
 import { clsx } from 'clsx';
 
 export type TTab = {
   label: string;
-  icon: string;
+  icon: ReactElement;
   component: ReactElement;
 };
 type TTabsProps = {
@@ -21,11 +21,11 @@ export default function Tabs({ tabs, selected, update }: TTabsProps) {
           key={label}
           className={clsx(
             selected === index ? 'bg-teal-900' : 'bg-teal-700',
-            'flex flex-1 items-center justify-center'
+            'flex flex-1 items-center justify-center border-l border-gray-700'
           )}
           onClick={() => update(index)}
         >
-          <Image src={icon} alt={label} width={30} height={30} />
+          {icon}
         </div>
       ))}
     </div>

@@ -1,4 +1,10 @@
 import { useState } from 'react';
+import {
+  Bars3BottomLeftIcon,
+  PhotoIcon,
+  IdentificationIcon,
+  SparklesIcon,
+} from '@heroicons/react/24/outline';
 import Tabs from 'components/Tabs';
 import Templates from 'components/Templates';
 import Details from 'components/Details';
@@ -8,22 +14,22 @@ import Images from 'components/Images';
 const tabData = [
   {
     label: 'Templates',
-    icon: '/template.svg',
+    icon: <IdentificationIcon className="h-7 w-7 text-teal-50" />,
     component: <Templates />,
   },
   {
     label: 'Details',
-    icon: '/text.svg',
+    icon: <Bars3BottomLeftIcon className="h-7 w-7 text-teal-50" />,
     component: <Details />,
   },
   {
     label: 'Styles',
-    icon: '/styles.svg',
+    icon: <SparklesIcon className="h-7 w-7 text-teal-50" />,
     component: <Styles />,
   },
   {
     label: 'Images',
-    icon: '/photo.svg',
+    icon: <PhotoIcon className="h-7 w-7 text-teal-50" />,
     component: <Images />,
   },
 ];

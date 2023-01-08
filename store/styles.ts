@@ -14,11 +14,11 @@ export interface IStyles {
 }
 
 export const createStylesSlice: StateCreator<IStyles> = (set) => ({
-  themeColor: '',
-  textColor: '',
-  linkColor: '',
-  font: '',
-  fontSize: '',
+  themeColor: 'F83368',
+  textColor: '000000',
+  linkColor: '6A78D1',
+  font: 'Arial',
+  fontSize: 'Normal',
   updateThemeColor: (themeColor) => set((state) => ({ ...state, themeColor })),
   updateTextColor: (textColor) => set((state) => ({ ...state, textColor })),
   updateLinkColor: (linkColor) => set((state) => ({ ...state, linkColor })),
