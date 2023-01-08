@@ -1,8 +1,7 @@
 import { StateCreator } from 'zustand';
 
 export interface IDetails {
-  firstName: string;
-  lastName: string;
+  name: string;
   jobTitle: string;
   department: string;
   company: string;
@@ -11,8 +10,7 @@ export interface IDetails {
   website: string;
   email: string;
   address: string;
-  updateFirstName: (firstName: string) => void;
-  updateLaseName: (lastName: string) => void;
+  updateName: (firstName: string) => void;
   updateJobTitle: (jobTitle: string) => void;
   updateDepartment: (department: string) => void;
   updateCompany: (company: string) => void;
@@ -24,8 +22,7 @@ export interface IDetails {
 }
 
 export const createDetailsSlice: StateCreator<IDetails> = (set) => ({
-  firstName: '',
-  lastName: '',
+  name: '',
   jobTitle: '',
   department: '',
   company: '',
@@ -34,8 +31,7 @@ export const createDetailsSlice: StateCreator<IDetails> = (set) => ({
   website: '',
   email: '',
   address: '',
-  updateFirstName: (firstName) => set((state) => ({ ...state, firstName })),
-  updateLaseName: (lastName) => set((state) => ({ ...state, lastName })),
+  updateName: (name) => set((state) => ({ ...state, name })),
   updateJobTitle: (jobTitle) => set((state) => ({ ...state, jobTitle })),
   updateDepartment: (department) => set((state) => ({ ...state, department })),
   updateCompany: (company) => set((state) => ({ ...state, company })),

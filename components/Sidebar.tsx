@@ -31,7 +31,7 @@ const tabData = [
 export default function Sidebar() {
   const [currentTab, setCurrentTab] = useState(0);
   return (
-    <div className="h-full w-full bg-teal-500">
+    <div className="flex h-full w-full flex-col bg-teal-900">
       <Tabs tabs={tabData} selected={currentTab} update={setCurrentTab} />
       {tabData[currentTab].component}
     </div>

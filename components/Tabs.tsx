@@ -20,7 +20,7 @@ export default function Tabs({ tabs, selected, update }: TTabsProps) {
         <div
           key={label}
           className={clsx(
-            selected === index ? 'bg-teal-500' : 'bg-teal-600',
+            selected === index ? 'bg-teal-900' : 'bg-teal-700',
             'flex flex-1 items-center justify-center'
           )}
           onClick={() => update(index)}
