@@ -1,23 +1,25 @@
 import create from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
 
-interface BearState {
-  bears: number;
-  increase: (by: number) => void;
-}
+import { createTemplatesSlice, ITemplate } from './templates';
+import { createDetailsSlice, IDetails } from './details';
+import { createStylesSlice, IStyles } from './styles';
+import { createImagesSlice, IImages } from './images';
 
-const useBearStore = create<BearState>()(
+const useStore = create<ITemplate & IDetails & IStyles & IImages>()(
   devtools(
     persist(
-      (set) => ({
-        bears: 0,
-        increase: (by) => set((state) => ({ bears: state.bears + by })),
+      (...a) => ({
+        ...createTemplatesSlice(...a),
+        ...createDetailsSlice(...a),
+        ...createStylesSlice(...a),
+        ...createImagesSlice(...a),
       }),
       {
-        name: 'bear-storage',
+        name: 'signature-storage',
       }
     )
   )
 );
 
-export default useBearStore;
+export default useStore;
