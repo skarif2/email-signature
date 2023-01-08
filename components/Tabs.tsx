@@ -1,5 +1,4 @@
-import { ReactElement, SVGProps } from 'react';
-import Image from 'next/image';
+import { ReactElement } from 'react';
 import { clsx } from 'clsx';
 
 export type TTab = {
