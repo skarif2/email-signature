@@ -9,7 +9,7 @@ export interface IImages {
   CTATextColor: string;
   CTAImage: string;
   updateProfilePicture: (profilePicture: string) => void;
-  updateConmpany: (companyLogo: string) => void;
+  updateConmpanyLogo: (companyLogo: string) => void;
   updateCTACopy: (CTACopy: string) => void;
   updateCTAUrl: (CTAUrl: string) => void;
   updateCTAColor: (CTAColor: string) => void;
@@ -22,12 +22,13 @@ export const createImagesSlice: StateCreator<IImages> = (set) => ({
   companyLogo: '',
   CTACopy: '',
   CTAUrl: '',
-  CTAColor: '',
-  CTATextColor: '',
+  CTAColor: '7075DB',
+  CTATextColor: 'FFFFFF',
   CTAImage: '',
   updateProfilePicture: (profilePicture) =>
     set((state) => ({ ...state, profilePicture })),
-  updateConmpany: (companyLogo) => set((state) => ({ ...state, companyLogo })),
+  updateConmpanyLogo: (companyLogo) =>
+    set((state) => ({ ...state, companyLogo })),
   updateCTACopy: (CTACopy) => set((state) => ({ ...state, CTACopy })),
   updateCTAUrl: (CTAUrl) => set((state) => ({ ...state, CTAUrl })),
   updateCTAColor: (CTAColor) => set((state) => ({ ...state, CTAColor })),

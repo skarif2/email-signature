@@ -23,7 +23,7 @@ export default function Details() {
 
   return (
     <div className="flex h-full flex-1 flex-col gap-8 overflow-y-auto px-12 py-8">
-      <h3 className="text-2xl font-medium text-gray-100">
+      <h3 className="text-xl font-medium text-gray-100">
         Add Signature Details
       </h3>
       <Input

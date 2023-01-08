@@ -25,7 +25,7 @@ export default function Tabs({ tabs, selected, update }: TTabsProps) {
           )}
           onClick={() => update(index)}
         >
-          <Image src={icon} alt={label} width={35} height={35} />
+          <Image src={icon} alt={label} width={30} height={30} />
         </div>
       ))}
     </div>
