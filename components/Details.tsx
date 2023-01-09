@@ -10,6 +10,8 @@ export default function Details() {
   const updateDepartment = useStore((state) => state.updateDepartment);
   const company = useStore((state) => state.company);
   const updateCompany = useStore((state) => state.updateCompany);
+  const pronouns = useStore((state) => state.pronouns);
+  const updatePronouns = useStore((state) => state.updatePronouns);
   const officeNumber = useStore((state) => state.officeNumber);
   const updateOfficeNumber = useStore((state) => state.updateOfficeNumber);
   const mobileNumber = useStore((state) => state.mobileNumber);
@@ -49,6 +51,12 @@ export default function Details() {
         placeholder="Awesome Corp."
         value={company}
         update={updateCompany}
+      />
+      <Input
+        label="Pronouns"
+        placeholder="He / Him"
+        value={pronouns}
+        update={updatePronouns}
       />
       <Input
         label="Office Number"

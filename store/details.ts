@@ -5,6 +5,7 @@ export interface IDetails {
   jobTitle: string;
   department: string;
   company: string;
+  pronouns: string;
   officeNumber: string;
   mobileNumber: string;
   website: string;
@@ -14,6 +15,7 @@ export interface IDetails {
   updateJobTitle: (jobTitle: string) => void;
   updateDepartment: (department: string) => void;
   updateCompany: (company: string) => void;
+  updatePronouns: (pronouns: string) => void;
   updateOfficeNumber: (officeNumber: string) => void;
   updateMobileNumber: (mobileNumber: string) => void;
   updateWebsite: (website: string) => void;
@@ -26,6 +28,7 @@ export const createDetailsSlice: StateCreator<IDetails> = (set) => ({
   jobTitle: '',
   department: '',
   company: '',
+  pronouns: '',
   officeNumber: '',
   mobileNumber: '',
   website: '',
@@ -35,6 +38,7 @@ export const createDetailsSlice: StateCreator<IDetails> = (set) => ({
   updateJobTitle: (jobTitle) => set((state) => ({ ...state, jobTitle })),
   updateDepartment: (department) => set((state) => ({ ...state, department })),
   updateCompany: (company) => set((state) => ({ ...state, company })),
+  updatePronouns: (pronouns) => set((state) => ({ ...state, pronouns })),
   updateOfficeNumber: (officeNumber) =>
     set((state) => ({ ...state, officeNumber })),
   updateMobileNumber: (mobileNumber) =>
