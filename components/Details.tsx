@@ -36,7 +36,7 @@ export default function Details() {
       />
       <Input
         label="Job Title"
-        placeholder="Marketer"
+        placeholder="Marketing Executive"
         value={jobTitle}
         update={updateJobTitle}
       />
@@ -71,16 +71,16 @@ export default function Details() {
         update={updateMobileNumber}
       />
       <Input
-        label="Website"
-        placeholder="www.awesome.com"
-        value={website}
-        update={updateWebsite}
-      />
-      <Input
         label="Email"
         placeholder="jon@awesome.com"
         value={email}
         update={updateEmail}
+      />
+      <Input
+        label="Website"
+        placeholder="www.awesome.com"
+        value={website}
+        update={updateWebsite}
       />
       <Input
         label="Address"

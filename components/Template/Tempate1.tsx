@@ -41,14 +41,14 @@ export default function Tempate1() {
                   }}
                 />
                 <Text
-                  text={[store.jobTitle || 'Marketer']}
+                  text={[store.jobTitle || 'Marketing Executive']}
                   color={store.textColor}
                   style={{ fontSize: '14px' }}
                 />
                 <Text
                   text={[
                     store.department || 'Marketing',
-                    store.company || ' Awesome Ltd.',
+                    store.company || ' Awesome Corp.',
                   ]}
                   color={store.textColor}
                   style={{ fontSize: '14px' }}
@@ -65,6 +65,33 @@ export default function Tempate1() {
                   </td>
                 </tr>
                 <BlankSpace height={20} />
+                <Text
+                  text={[
+                    'p',
+                    store.officeNumber || '111 222 3333',
+                    store.mobileNumber || '111 222 3333',
+                  ]}
+                  color={store.textColor}
+                  style={{ fontSize: '14px' }}
+                />
+                <Text
+                  text={['e', store.email || 'jon@awesome.com']}
+                  color={store.textColor}
+                  style={{ fontSize: '14px' }}
+                />
+                <Text
+                  text={['w', store.website || 'https://awesome.com']}
+                  color={store.textColor}
+                  style={{ fontSize: '14px' }}
+                />
+                <Text
+                  text={[
+                    'a',
+                    store.address || '212 Anderson St. Hamburg, NY 14075',
+                  ]}
+                  color={store.textColor}
+                  style={{ fontSize: '14px' }}
+                />
               </tbody>
             </table>
           </td>
