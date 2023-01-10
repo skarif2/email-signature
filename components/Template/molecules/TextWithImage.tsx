@@ -20,21 +20,29 @@ function Txt({
   imageStyle,
 }: TTextProps) {
   return (
-    <td
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: '8px',
-        color: `#${color}`,
-        ...textStyle,
-      }}
-    >
-      <img
-        src={src || '/placeholder-profile.webp'}
-        alt={alt || 'Image'}
-        style={{ backgroundColor: `#${imageColor}`, ...imageStyle }}
-      />
-      {text.map((txt, idx) => (idx === 0 ? txt : ` · ${txt}`))}
+    <td>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                src={src || '/placeholder-profile.webp'}
+                alt={alt || 'Image'}
+                style={{ backgroundColor: `#${imageColor}`, ...imageStyle }}
+              />
+            </td>
+            <td width={8}></td>
+            <td
+              style={{
+                color: `#${color}`,
+                ...textStyle,
+              }}
+            >
+              {text.map((txt, idx) => (idx === 0 ? txt : ` · ${txt}`))}
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </td>
   );
 }
