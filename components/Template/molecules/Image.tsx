@@ -8,11 +8,13 @@ type TProfilePicture = {
 
 function Img({ src, alt, style = {} }: TProfilePicture) {
   return (
-    <img
-      src={src || '/placeholder-profile.webp'}
-      alt={alt || 'Image'}
-      style={style}
-    />
+    <td>
+      <img
+        src={src || '/placeholder-profile.webp'}
+        alt={alt || 'Image'}
+        style={style}
+      />
+    </td>
   );
 }
 
@@ -22,13 +24,9 @@ export default function ProfilePicture({
 }: TProfilePicture) {
   return as === 'tr' ? (
     <tr>
-      <td>
-        <Img {...rest} />
-      </td>
+      <Img {...rest} />
     </tr>
   ) : (
-    <td>
-      <Img {...rest} />
-    </td>
+    <Img {...rest} />
   );
 }

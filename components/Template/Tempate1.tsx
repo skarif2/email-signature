@@ -2,6 +2,7 @@ import useStore from 'store';
 import Text from './molecules/Text';
 import Image from './molecules/Image';
 import BlankSpace from './molecules/BlankSpace';
+import TextWithImage from './molecules/TextWithImage';
 
 export default function Tempate1() {
   const store = useStore();
@@ -65,32 +66,44 @@ export default function Tempate1() {
                   </td>
                 </tr>
                 <BlankSpace height={20} />
-                <Text
+                <TextWithImage
                   text={[
-                    'p',
                     store.officeNumber || '111 222 3333',
                     store.mobileNumber || '111 222 3333',
                   ]}
+                  src={'https://i.ibb.co/vB2s2Pt/phone-icon-2x.webp'}
+                  alt="p"
                   color={store.textColor}
-                  style={{ fontSize: '14px' }}
+                  imageColor={store.themeColor}
+                  textStyle={{ fontSize: '14px' }}
+                  imageStyle={{ width: '12px', height: '12px' }}
                 />
-                <Text
-                  text={['e', store.email || 'jon@awesome.com']}
+                <TextWithImage
+                  text={[store.email || 'jon@awesome.com']}
+                  src={'https://i.ibb.co/3yttJ5t/email-icon-2x-1.webp'}
+                  alt="e"
                   color={store.textColor}
-                  style={{ fontSize: '14px' }}
+                  imageColor={store.themeColor}
+                  textStyle={{ fontSize: '14px' }}
+                  imageStyle={{ width: '12px', height: '12px' }}
                 />
-                <Text
-                  text={['w', store.website || 'https://awesome.com']}
+                <TextWithImage
+                  text={[store.website || 'https://awesome.com']}
+                  src={'https://i.ibb.co/Qvrg22s/link-icon-2x.webp'}
+                  alt="w"
                   color={store.textColor}
-                  style={{ fontSize: '14px' }}
+                  imageColor={store.themeColor}
+                  textStyle={{ fontSize: '14px' }}
+                  imageStyle={{ width: '12px', height: '12px' }}
                 />
-                <Text
-                  text={[
-                    'a',
-                    store.address || '212 Anderson St. Hamburg, NY 14075',
-                  ]}
+                <TextWithImage
+                  text={[store.address || '212 Anderson St. Hamburg, NY 14075']}
+                  src={'https://i.ibb.co/0QDc1M2/address-icon-2x.webp'}
+                  alt="a"
                   color={store.textColor}
-                  style={{ fontSize: '14px' }}
+                  imageColor={store.themeColor}
+                  textStyle={{ fontSize: '14px' }}
+                  imageStyle={{ width: '12px', height: '12px' }}
                 />
               </tbody>
             </table>
